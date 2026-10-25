@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>التهديدات | NetGuardian AI 2.0</title>
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<script src="script.js" defer></script>
+</head>
+<body>
+<header class="topbar">
+<a class="brand" href="index.html"><span class="brand-mark">N</span><span>NetGuardian <b>AI 2.0</b><small>NETWORK DEFENSE PLATFORM</small></span></a>
+<button class="menu-toggle" aria-label="فتح القائمة" aria-expanded="false">☰</button>
+<nav class="nav">
+<a href="index.html" data-page="index">الرئيسية</a>
+<a href="dashboard.html" data-page="dashboard">لوحة التحكم</a>
+<a href="threats.html" data-page="threats">التهديدات</a>
+<a href="simulator.html" data-page="simulator">المحاكي</a>
+<a href="reports.html" data-page="reports">التقارير</a>
+<a href="about.html" data-page="about">عن المشروع</a>
+</nav>
+<a class="nav-cta" href="simulator.html">اختبر قرار الحماية ↗</a>
+</header>
+
+<main class="container page-wrap">
+<div class="page-title-row">
+<div><span class="eyebrow"><span class="pulse-dot"></span> THREAT INTELLIGENCE</span><h1>مركز <span class="gradient-text">التهديدات</span></h1><p class="muted">استعرض الأحداث التجريبية وابحث فيها حسب النوع ومستوى الخطورة.</p></div>
+<span class="tag tag-green">● بيانات افتراضية</span>
+</div>
+
+<section class="metric-grid compact-metrics">
+<article class="metric-card"><div class="metric-top"><span>إجمالي الأحداث</span><span class="metric-icon">⌁</span></div><strong>36</strong><div class="metric-foot"><span>كل الأحداث التجريبية</span></div></article>
+<article class="metric-card"><div class="metric-top"><span>خطورة مرتفعة</span><span class="metric-icon red">⚑</span></div><strong>04</strong><div class="metric-foot"><span class="danger-text">تحتاج مراجعة أولاً</span></div></article>
+<article class="metric-card"><div class="metric-top"><span>خطورة متوسطة</span><span class="metric-icon orange">◈</span></div><strong>12</strong><div class="metric-foot"><span>تستحق الفحص</span></div></article>
+<article class="metric-card"><div class="metric-top"><span>خطورة منخفضة</span><span class="metric-icon">✓</span></div><strong>20</strong><div class="metric-foot"><span class="positive">معلومات للمراجعة</span></div></article>
+</section>
+
+<section class="panel">
+<div class="panel-heading"><div><h2>سجل الأحداث الأمنية</h2><p class="muted">يمكنك البحث والتصفية في السجلات المعروضة.</p></div><span class="tag">DEMO LOGS</span></div>
+<div class="filters">
+<input id="threatSearch" type="search" placeholder="ابحث عن حدث أو عنوان IP..." aria-label="البحث في التهديدات">
+<select id="severityFilter" aria-label="تصفية حسب الخطورة"><option value="all">كل مستويات الخطورة</option><option value="high">مرتفع</option><option value="medium">متوسط</option><option value="low">منخفض</option></select>
+<button class="btn btn-ghost" id="clearFilters" type="button">مسح الفلاتر</button>
+</div>
+<div class="table-wrap">
+<table class="data-table" id="threatTable">
+<thead><tr><th>اسم الحدث</th><th>عنوان المصدر</th><th>النوع</th><th>الخطورة</th><th>الحالة</th><th>الوقت</th></tr></thead>
+<tbody>
+<tr data-level="high"><td>ارتفاع حركة البيانات</td><td>192.168.1.24</td><td>حركة مرور غير معتادة</td><td><span class="severity high">مرتفع</span></td><td><span class="status">قيد المراجعة</span></td><td>10:42</td></tr>
+<tr data-level="medium"><td>محاولات اتصال متكررة</td><td>192.168.1.18</td><td>اتصالات متكررة</td><td><span class="severity medium">متوسط</span></td><td><span class="status done">تم التحليل</span></td><td>10:35</td></tr>
+<tr data-level="low"><td>جهاز جديد على الشبكة</td><td>192.168.1.32</td><td>جهاز غير معروف</td><td><span class="severity low">منخفض</span></td><td><span class="status">قيد المراجعة</span></td><td>10:21</td></tr>
+<tr data-level="medium"><td>حركة بيانات غير معتادة</td><td>192.168.1.12</td><td>تغير في نمط المرور</td><td><span class="severity medium">متوسط</span></td><td><span class="status done">تم التحليل</span></td><td>09:58</td></tr>
+<tr data-level="high"><td>عدد كبير من الطلبات</td><td>192.168.1.45</td><td>زيادة مفاجئة بالطلبات</td><td><span class="severity high">مرتفع</span></td><td><span class="status">قيد المراجعة</span></td><td>09:41</td></tr>
+<tr data-level="low"><td>تغير بسيط في الاستخدام</td><td>192.168.1.09</td><td>نشاط اعتيادي محتمل</td><td><span class="severity low">منخفض</span></td><td><span class="status done">تم التحليل</span></td><td>09:22</td></tr>
+<tr data-level="medium"><td>اتصال بخدمة غير معتادة</td><td>192.168.1.28</td><td>اتصال يحتاج التحقق</td><td><span class="severity medium">متوسط</span></td><td><span class="status">قيد المراجعة</span></td><td>09:14</td></tr>
+<tr data-level="high"><td>تدفق بيانات غير طبيعي</td><td>192.168.1.51</td><td>زيادة مفاجئة بالمرور</td><td><span class="severity high">مرتفع</span></td><td><span class="status">قيد المراجعة</span></td><td>08:57</td></tr>
+<tr data-level="low"><td>اتصال جهاز معروف</td><td>192.168.1.07</td><td>نشاط طبيعي</td><td><span class="severity low">منخفض</span></td><td><span class="status done">تم التحليل</span></td><td>08:32</td></tr>
+</tbody>
+</table>
+</div>
+<p id="emptyState" class="empty-state" hidden>لا توجد نتائج مطابقة للبحث الحالي.</p>
+<p class="small-note muted">تنبيه: السجلات وعناوين IP المعروضة أمثلة توضيحية وليست أحداثاً مرصودة من شبكة حقيقية.</p>
+</section>
+
+<section class="bottom-banner"><div><span class="eyebrow">NEXT STEP</span><h2>اختبر الإجراء قبل اتخاذ القرار.</h2><p>انتقل إلى المحاكي لمقارنة إجراءات الحماية افتراضياً.</p></div><a class="btn btn-primary" href="simulator.html">فتح المحاكي ↗</a></section>
+</main>
+
+<footer class="footer container"><a class="brand footer-brand" href="index.html"><span class="brand-mark">N</span><span>NetGuardian <b>AI 2.0</b></span></a><span>© 2026 NetGuardian AI 2.0 · مشروع تعليمي تجريبي</span><span class="footer-status"><i class="pulse-dot"></i> الواجهة تعمل</span></footer>
+</body>
+</html>
